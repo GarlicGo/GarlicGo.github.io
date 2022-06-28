@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex布局学习</title>
+    <style>
+      .root {
+        display: flex;
+
+        flex-direction: row; /* 主轴及方向（起点终点） */
+        flex-wrap: wrap;
+
+        height: 400px;
+        width: 500px;
+        background: green;
+      }
+      .root2 {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 10px;
+        height: 400px;
+        width: 500px;
+        border: peru 10px solid;
+        background: green;
+      }
+      .box-2 {
+        box-sizing: border-box;
+        width: 200px;
+        height: 100px;
+        background: wheat;
+        border: violet 35px solid;
+        padding: 30px;
+      }
+      .temp {
+        flex-wrap: wrap; /* 换行方法(也能简单控制交叉轴/副轴方向) */
+        /* flex-flow 前两者对简写方式　*/
+        justify-content: center; /* 主轴对齐方式 */
+        align-items: center; /* 交叉轴/副轴对齐方式 */
+        align-content: center;
+      }
+      .box {
+        box-sizing: content-box;
+        width: 200px;
+        height: 100px;
+
+        /* border: black 5px solid; */
+        /* background: red;
+        border-color: black; */
+      }
+      .box1 {
+        order: 1;
+        /* flex-basis: 50px; */
+        border: black 5px solid;
+        background: red;
+      }
+      .box2 {
+        order: 2;
+        flex-shrink: 0;
+        border: peru 5px solid;
+        background: skyblue;
+      }
+      .box3 {
+        order: 2;
+        flex-shrink: 18;
+        border: purple 5px solid;
+        background: yellow;
+        /* align-self: flex-end; */
+      }
+      .box4 {
+        order: 4;
+        flex-shrink: 20;
+        border: goldenrod 5px solid;
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+    </div>
+    <div class="root2">
+      <div class="box-2 box-2-1">1</div>
+      <div class="box-2 box-2-2">2</div>
+      <div class="box-2 box-2-3">3</div>
+      <div class="box-2 box-2-4">4</div>
+    </div>
+    <script>
+        console.log("ceshi.html");
+    </script>
+  </body>
+</html>
